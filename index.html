@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloembak-kopen.be | Duurzame Houten Bloembakken</title>
+    <meta name="description" content="Ontdek onze collectie duurzame houten bloembakken. Perfect voor tuin, terras of balkon. Vakmanschap en kwaliteit voor jarenlang tuinplezier.">
+    <style>
+        :root {
+            --primary-color: #2D5A27;
+            --secondary-color: #1B4332;
+            --accent-color: #A98307;
+            --text-color: #333333;
+            --background-light: #F6F8F5;
+            --background-dark: #E8EFE6;
+            --card-bg: #FFFFFF;
+            --hover-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--background-light);
+        }
+
+        header {
+            background: linear-gradient(165deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            margin-bottom: 3rem;
+        }
+
+        .top-cta {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .top-cta:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 2rem auto 4rem;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-content {
+            padding: 1.8rem;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .product-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 2rem;
+            background: var(--background-dark);
+            border-radius: 20px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4rem 2rem;
+            margin-top: 6rem;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .company-info {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .company-info h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 768px) {
+            .top-cta {
+                position: static;
+                display: inline-block;
+                margin-top: 2rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            header {
+                padding: 3rem 1rem 5rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bloembak-kopen.be</h1>
+        <p class="header-subtitle">Stijlvolle Houten Bloembakken voor Tuin, Terras & Balkon</p>
+        <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="top-cta">Naar de Webshop</a>
+    </header>
+
+    <section class="section">
+        <div class="intro-text">
+            <p>Ontdek onze collectie duurzame houten bloembakken, waar ambachtelijk vakmanschap en moderne design samenkomen. Elke bloembak is vervaardigd uit hoogwaardig hout en behandeld voor optimale duurzaamheid.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Duurzaam Hout</h3>
+                <p>Gemaakt van hoogwaardig behandeld hout voor jarenlang gebruik</p>
+            </div>
+            <div class="feature-card">
+                <h3>Vakmanschap</h3>
+                <p>Zorgvuldig vervaardigd met oog voor detail</p>
+            </div>
+            <div class="feature-card">
+                <h3>Weerbestendig</h3>
+                <p>Speciaal behandeld voor optimale bescherming</p>
+            </div>
+        </div>
+
+        <h2>Onze Collectie</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/lombok-1_700x700.jpg?v=1732008813" alt="Bloembak Lombok">
+                <div class="product-content">
+                    <h3 class="product-title">Bloembak Lombok</h3>
+                    <p class="product-description">Elegante bloembak met modern design</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/kalimantan-klein-1_1200x1200.jpg?v=1707319416" alt="Bloembak Kalimantan">
+                <div class="product-content">
+                    <h3 class="product-title">Bloembak Kalimantan</h3>
+                    <p class="product-description">Compacte bloembak met natuurlijke uitstraling</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/trellis-bloembak-2_1279x1279.jpg?v=1712669968" alt="Trellis Bloembak">
+                <div class="product-content">
+                    <h3 class="product-title">Trellis Bloembak</h3>
+                    <p class="product-description">Bloembak met geïntegreerd klimrek</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/java1_1200x1200.jpg?v=1707320368" alt="Bloembak Java">
+                <div class="product-content">
+                    <h3 class="product-title">Bloembak Java</h3>
+                    <p class="product-description">Stijlvolle bloembak met ruime plantcapaciteit</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/bloembak-teak-bali-1000-a8ab95a6-84fd-466e-9fc0-2af04fc7a4b7-_1_109567a9-f50a-41d0-a8a1-3d7bc0ac44f6_667x1000.jpg?v=1706789386" alt="Bloembak Bali">
+                <div class="product-content">
+                    <h3 class="product-title">Bloembak Bali</h3>
+                    <p class="product-description">Luxe teak bloembak met tijdloos design</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/flux-bloembak-60-600-1_591x520.jpg?v=1706789171" alt="Flux Bloembak">
+                <div class="product-content">
+                    <h3 class="product-title">Flux Bloembak</h3>
+                    <p class="product-description">Moderne bloembak met strak design</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/elan-bloembak-2_1200x1200.jpg?v=1716387444" alt="Elan Bloembak">
+                <div class="product-content">
+                    <h3 class="product-title">Elan Bloembak</h3>
+                    <p class="product-description">Elegante bloembak met verhoogde rand</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+
+
+
+<div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/636401-500-1_510x319.jpg?v=1706789180" alt="Plantenbak Compact">
+                <div class="product-content">
+                    <h3 class="product-title">Plantenbak Compact</h3>
+                    <p class="product-description">Compacte plantenbak voor kleine ruimtes</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://www.e-woodproducts.be/cdn/shop/files/WV-douglas-vierkante-meter-650-1_650x391.jpg?v=1706789163" alt="Douglas Vierkante Meter">
+                <div class="product-content">
+                    <h3 class="product-title">Douglas Vierkante Meter</h3>
+                    <p class="product-description">Ruime plantenbak voor moestuin of terras</p>
+                    <a href="https://www.e-woodproducts.be/collections/opbergen-organisatie" class="cta-button">Bekijk Product</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="company-info">
+            <h3>BV E-Products Europe</h3>
+            <p>Patijntjestraat 107<br>9000 Gent</p>
+            <p>BTW: BE 0500.621.156</p>
+            <p>E-mail: support@e-woodproducts.com</p>
+            <p>Bankgegevens:<br>
+            BIC: GEBA BE BB<br>
+            IBAN: BE 61 0016 8384 4117</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="max-w-6xl mx-auto text-center">
+            <p>&copy; 2025 BV E-Products Europe. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+</body>
+</html>
